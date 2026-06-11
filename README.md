@@ -3,18 +3,18 @@
 ## Table of Contents
 - [Project Overview](#projectoverview)
 - [Major Hardware](#major-hardware)
-  - [Romi Chassis and Components](#romi-chassis-and-components)
-  - [Microcontroller](#microcontroller)
-  - [Sensors](#sensors)
-  - [Additional Components](#additional-components)
-  - [Wiring Diagram](#wiring-diagram)
+  - [PCB](#pcb)
+  - [Mechanical Design](#mechanical-design)
+  - [Stepper Motors](#stepper-motors)
+  - [Distance Sensor](#distance-sensor)
+  - [LCD](#lcd)
+  - [Switches](#switches)
+  - [Limit Switches](#limit-switches)
 - [Software](#software)
-  - [Source Code](#source-code)
-  - [Hardware Drivers](#hardware-drivers)
-  - [Task Diagram and FSM](#task-diagram-and-fsm)
-  - [Gain Detirmination](#gain-determination)
-- [Control Therory](#control-theory)
-- [Getting Started](#getting-started)
+  - [Main](#main)
+  - [LCD Driver](#lcd-driver)
+- [Modeling](#modeling)
+- [Improvements](#improvements)
 - [Reflections](#reflections)
 
 ## Project Overview
@@ -38,11 +38,39 @@ Overall, this project demonstrates the development of a complete embedded mechat
 ## Major Hardware
 [Back to top](#Table-of-Contents)
 
-### Romi Chassis and Components
+### PCB
 
-The core components of Romi, sourced from Pololu, include the motors (Figure 5), encoders (Figure 5), power distribution board (Figure 3), and chassis (Figure 4). The motors are coupled with a 120:1 gearbox, providing high torque and precise control. Each encoder has a resolution of 12 ticks per motor shaft revolution, resulting in 1440 encoder ticks per full wheel rotation. Romi is powered by six AA batteries, which are regulated through the power distribution board. The motors receive power directly from the distribution board and are controlled through its integrated circuitry.
+### Mechanical Design
+[Back to top](#Table-of-Contents)
 
+### Stepper Motors
+[Back to top](#Table-of-Contents)
 
-  <img height="240" alt="[Screenshot 2025-03-16 160153" src="https://github.com/user-attachments/assets/8af7760e-e74b-4c70-9e59-c029caaecfe0" />
-  <img height="240" alt="[Screenshot 2025-03-16 160208" src="https://github.com/user-attachments/assets/0ec7f4de-23a0-4646-b721-331e287d3c96" />
-  <img height="240" alt="[Screenshot 2025-03-16 160101" src="https://github.com/user-attachments/assets/f1b07fd9-ac19-4c26-b4b9-96e414122c30" />
+### Distance Sensor
+[Back to top](#Table-of-Contents)
+
+### LCD
+[Back to top](#Table-of-Contents)
+
+### Switches
+[Back to top](#Table-of-Contents)
+
+### Limit Switches
+[Back to top](#Table-of-Contents)
+
+## Software
+[Back to top](#Table-of-Contents)
+
+### Main
+
+### LCD Driver
+[Back to top](#Table-of-Contents)
+
+## Modeling
+[Back to top](#Table-of-Contents)
+
+## Improvements
+[Back to top](#Table-of-Contents)
+
+## Reflection
+[Back to top](#Table-of-Contents)
