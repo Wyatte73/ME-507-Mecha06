@@ -49,10 +49,11 @@ The TMC2209 motor drivers were used to drive the stepper motors. These ICs recei
 The board was powered using a 12 V wall adapter. A buck converter, the LM2576, stepped the input voltage down from 12 V to 5 V, creating the 5 V power rail. An AMS1117 low-dropout linear regulator then reduced the 5 V rail to 3.3 V, which was used to power the STM32 microcontroller and other 3.3 V components. The power management system also included reverse-current protection to prevent current from flowing back into the wall adapter.
 
 <p align="center">
-  <PICTURE OF PCB>
+  <img width="1870" height="1444" alt="Screenshot 2026-06-11 162218" src="https://github.com/user-attachments/assets/285cfed1-5c1d-4302-a57a-4bf008ce29f7" />
+  <img width="2235" height="1441" alt="Screenshot 2026-06-11 162342" src="https://github.com/user-attachments/assets/9639793a-a3ed-456c-8c29-9017fda0127a" />
 </p>
 <p align="center">
-  Figure 2. Final PCB
+  Figure 2-3. PCB Schematic
 </p>
 
 ### Mechanical Design
