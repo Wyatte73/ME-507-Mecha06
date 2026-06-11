@@ -17,6 +17,7 @@
 - [Improvements](#improvements)
 - [Reflections](#reflections)
 
+
 ## Project Overview
 [Back to top](#Table-of-Contents)
 
@@ -35,8 +36,10 @@ Overall, this project demonstrates the development of a complete embedded mechat
   Figure 1. Ice Cold Beer Game
 </p>
 
+
 ## Major Hardware
 [Back to top](#Table-of-Contents)
+
 
 ### PCB
 
@@ -57,7 +60,7 @@ The board was powered using a 12 V wall adapter. A buck converter, the LM2576, s
 </p>
 
 <p align="center">
-  <img width="3024" height="4032" alt="IMG_7492" src="https://github.com/user-attachments/assets/e71a02a3-5c6f-4b3f-9c1d-4fd526b5dee1" />
+  <img width="1512" height="2016" alt="IMG_7492" src="https://github.com/user-attachments/assets/e71a02a3-5c6f-4b3f-9c1d-4fd526b5dee1" />
 </p>
 <p align="center">
   Figure 4. Final PCB
@@ -94,12 +97,10 @@ The board was powered using a 12 V wall adapter. A buck converter, the LM2576, s
 </p>
 
 
-
-
-
-
 ### Mechanical Design
 [Back to top](#Table-of-Contents)
+
+
 
 ### Stepper Motors
 [Back to top](#Table-of-Contents)
