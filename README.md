@@ -28,10 +28,15 @@ The custom PCB served as the central hardware interface for the project. It conn
 
 Overall, this project demonstrates the development of a complete embedded mechatronic system, combining PCB design, microcontroller programming, stepper motor control, sensor integration, and a user-interface to recreate a game. 
 
-<img width="545" height="726" alt="R" src="https://github.com/user-attachments/assets/c4f8bfcb-f1fc-443e-87b6-743634f9f17b" />
+<p align="center">
+  <img width="545" height="726" alt="R" src="https://github.com/user-attachments/assets/c4f8bfcb-f1fc-443e-87b6-743634f9f17b" />
+</p>
+<p align="center">
+  Figure 1. Ice Cold Beer Game
+</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Figure 1. Course Layout
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Figure 2. Final Build of Romi
 
