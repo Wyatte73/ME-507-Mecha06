@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
-- [Hardware](#hardware)
+- [Major Hardware](#major-hardware)
   - [Romi Chassis and Components](#romi-chassis-and-components)
   - [Microcontroller](#microcontroller)
   - [Sensors](#sensors)
@@ -35,17 +35,7 @@ Overall, this project demonstrates the development of a complete embedded mechat
   Figure 1. Ice Cold Beer Game
 </p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Figure 2. Final Build of Romi
-
-[![Watch the video](https://img.youtube.com/vi/zJc4XDnnLkc/maxresdefault.jpg)](https://www.youtube.com/shorts/zJc4XDnnLkc)
-<p align="center">
-  Click Thumbnail above to view demonstration
-</p>
-
-## Hardware
+## Major Hardware
 [Back to top](#Table-of-Contents)
 
 ### Romi Chassis and Components
@@ -56,24 +46,3 @@ The core components of Romi, sourced from Pololu, include the motors (Figure 5),
   <img height="240" alt="[Screenshot 2025-03-16 160153" src="https://github.com/user-attachments/assets/8af7760e-e74b-4c70-9e59-c029caaecfe0" />
   <img height="240" alt="[Screenshot 2025-03-16 160208" src="https://github.com/user-attachments/assets/0ec7f4de-23a0-4646-b721-331e287d3c96" />
   <img height="240" alt="[Screenshot 2025-03-16 160101" src="https://github.com/user-attachments/assets/f1b07fd9-ac19-4c26-b4b9-96e414122c30" />
-
-&nbsp;&nbsp;
-Figure 3. Power Distribution Board
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Figure 4. Romi Chassis
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Figure 5. Motor and Encoder Pair
-
-
-
-### Microcontroller
-[Back to top](#Table-of-Contents)
-
-The STM32 Nucleo-L476RG microcontroller served as the central processing unit for Romi and was provided by the professor. Acting as Romi’s "brain," it processed sensor data, interpreted the readings, and executed control algorithms to drive the motors. This allowed Romi to navigate the course effectively based on real-time feedback. Figure 6 provides a visual representation of the Nucleo board. Further documentation on the Nucleo-L476RG can be found [here](https://www.st.com/resource/en/user_manual/um1724-stm32-nucleo64-boards-mb1136-stmicroelectronics.pdf). Further documentation on the MicroPython can be found [here](https://docs.micropython.org/en/latest/library/pyb.html)
-
-<p align="center">
-  <img width="300" alt="[Screenshot 2025-03-16 142309" src="https://github.com/user-attachments/assets/ad4143ad-f2fc-4ce5-9881-01eb9068ed2d" />
-</p>
-<p align="center">
-  Figure 6. Nucleo L476RG
-</p>
