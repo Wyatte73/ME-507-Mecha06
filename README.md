@@ -22,11 +22,11 @@
 
 This repository contains the ME-507 term project by Wyatt Eberhart and Max Soury. The goal of the project was to design, fabricate, and test a custom printed circuit board for an embedded control system based on the STM32F411CE6U microcontroller.
 
-The project was inspired by the classic Ice Cold Beer arcade game, where the player controls a bar to guide a ball upward while avoiding holes. In this version, the system uses two stepper motors to control the motion of the bar, allowing the user to adjust each side independently. A distance sensor, two limit switches, two user switches, and an LCD display were integrated into the system to support gameplay, calibration, user input, and system feedback.
+The project was inspired by the classic Ice Cold Beer arcade game, where the player controls a bar to guide a ball upward while avoiding holes. In this version, the system uses two stepper motors to control the motion of the bar, allowing the user to adjust each side independently. A distance sensor, two limit switches, two user switches, and an LCD display were integrated into the system to allow for a control system and a user controlled mode.
 
-The custom PCB served as the central hardware interface for the project. It connected the STM32 microcontroller to the motors, sensors, switches, and display, creating a cleaner and more reliable control platform than a breadboard-based setup. The STM32 reads the user switches and sensor inputs, processes the game-control logic, and commands the stepper motors to move the bar accordingly.
+The custom PCB served as the central hardware interface for the project. It connected the STM32 microcontroller to the motors, sensors, switches, and display, creating a clean and viable control platform. The STM32 reads the user switches and sensor inputs, processes the game-control logic, and commands the stepper motors to move the bar accordingly.
 
-Overall, this project demonstrates the development of a complete embedded mechatronic system, combining PCB design, microcontroller programming, stepper motor control, sensor integration, and user-interface feedback in a game-inspired application.
+Overall, this project demonstrates the development of a complete embedded mechatronic system, combining PCB design, microcontroller programming, stepper motor control, sensor integration, and a user-interface to recreate a game. 
 
 <img height="280" alt="Screenshot 2025-03-16 at 12 55 04 PM" src="https://github.com/user-attachments/assets/97ac74ea-d0b5-4674-859b-4bc7075b9cf2" />
 <img height="280" alt="IMG_5718" src="https://github.com/user-attachments/assets/c376aa85-b766-441c-93ef-0afb0c2265a2" />
