@@ -60,7 +60,7 @@ The board was powered using a 12 V wall adapter. A buck converter, the LM2576, s
 </p>
 
 <p align="center">
-  <img width="1512" height="2016" alt="IMG_7492" src="https://github.com/user-attachments/assets/e71a02a3-5c6f-4b3f-9c1d-4fd526b5dee1" />
+  <img width="3024" height="4032"" alt="IMG_7492" src="https://github.com/user-attachments/assets/e71a02a3-5c6f-4b3f-9c1d-4fd526b5dee1" />
 </p>
 <p align="center">
   Figure 4. Final PCB
@@ -100,7 +100,7 @@ The board was powered using a 12 V wall adapter. A buck converter, the LM2576, s
 ### Mechanical Design
 [Back to top](#Table-of-Contents)
 
-
+The mechanical design has two components on either side of the game board that are able to move up and down independently of one another. To allow the components to move up and down, a power screw is turned by a stepper motor to make the carriages move up and down with the use of a power screw nut. 
 
 ### Stepper Motors
 [Back to top](#Table-of-Contents)
