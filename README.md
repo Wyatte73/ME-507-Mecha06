@@ -28,7 +28,8 @@ The custom PCB served as the central hardware interface for the project. It conn
 
 Overall, this project demonstrates the development of a complete embedded mechatronic system, combining PCB design, microcontroller programming, stepper motor control, sensor integration, and a user-interface to recreate a game. 
 
-<img height="280" alt="Screenshot 2025-03-16 at 12 55 04 PM" src="https://github.com/user-attachments/assets/97ac74ea-d0b5-4674-859b-4bc7075b9cf2" />
+<img height="280" alt="<img width="1514" height="1540" alt="Screenshot 2026-06-11 133332" src="https://github.com/user-attachments/assets/d03da6de-2d2d-4bb8-b004-e45535e98d3d" />![Uploading Screenshot 2026-06-11 133332.png…]()
+" src="https://github.com/user-attachments/assets/97ac74ea-d0b5-4674-859b-4bc7075b9cf2" />
 <img height="280" alt="IMG_5718" src="https://github.com/user-attachments/assets/c376aa85-b766-441c-93ef-0afb0c2265a2" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
