@@ -1,0 +1,14 @@
+.settings
+Debug/
+Drivers/
+Inc/*
+Src/*
+!Core/Inc/main.h
+!Core/Inc/LCD.h
+!Core/Src/main.c
+!Core/Src/LCD.c
+.croject
+.mxproject
+ICB Debug.launch
+STM32F411CEUX_FLASH.Id
+STM32F411CEUX_RAM.Id
