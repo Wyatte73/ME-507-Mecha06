@@ -1,0 +1,2 @@
+../Core/Src/MOTOR.c:9:6:Motor_Setup	24	static
+../Core/Src/MOTOR.c:16:6:Motor_Command	32	static
