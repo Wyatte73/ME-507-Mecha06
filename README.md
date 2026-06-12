@@ -141,13 +141,23 @@ The other components are static and to structurally hold the assembly together. 
   Figure 13. Fixed joint with the linear sensor
 </p>
 
+
+
+
+
+
+
+
+
+
+
 ### Stepper Motors
 [Back to top](#Table-of-Contents)
 
 The system uses 42BYGHM809 stepper motors to drive the vertical motion assemblies on each side of the game board. These motors were selected because they provide precise position control, which is necessary for accurately raising and lowering each side of the mechanism. These steppers have 400 steps/rev which allowed for greater precision and smoother rotation (less notchy). The stepper motor is shown in Figure 14.
 
 <p align="center">
-  <img width="4032" height="3024" alt="IMG_7501" src="https://github.com/user-attachments/assets/fb44edb9-66a9-47ac-b75f-9a6ad88d8b1d" />
+  <img width="3024" height="4032" alt="IMG_7502" src="https://github.com/user-attachments/assets/880557bc-f419-4a7f-a655-38cdb46d41df" />
 </p>
 <p align="center">
   Figure 14. Stepper motor
@@ -159,7 +169,7 @@ The system uses 42BYGHM809 stepper motors to drive the vertical motion assemblie
 A Pololu Distance Sensor V2 with pulse width output and a maximum sensing range of 50 cm, item 5562, was used to measure the position of the ball on the game board. The sensor outputs a pulse width signal that corresponds to the measured distance, allowing the microcontroller to determine how far the ball is from the sensor. This distance measurement can then be used as feedback for tracking the ball’s position during gameplay. The distance sensor is shown in Figure 15.
 
 <p align="center">
-  
+  <img width="3024" height="4032" alt="IMG_7503" src="https://github.com/user-attachments/assets/0a022d4d-fccd-4cd0-96ac-f013d7513bad" />
 </p>
 <p align="center">
   Figure 15. Distance sensor
@@ -171,7 +181,7 @@ A Pololu Distance Sensor V2 with pulse width output and a maximum sensing range 
 MAX
 
 <p align="center">
-  
+  <img width="3024" height="4032" alt="IMG_7504" src="https://github.com/user-attachments/assets/0774be44-ed09-402c-b25f-8f6ea0961d12" />
 </p>
 <p align="center">
   Figure 16. LCD
@@ -183,7 +193,7 @@ MAX
 Rocker switches were used as user input controls for the system. These switches provide a simple and reliable way for the user to control the motors up or down. Since they are single-pole double-throw switches, each switch can route a signal between two different states or positions.
 
 <p align="center">
-  
+  <img width="3024" height="4032" alt="IMG_7505" src="https://github.com/user-attachments/assets/8ff0ef92-68c6-4fb0-a5c5-a93f5126a491" />
 </p>
 <p align="center">
   Figure 17. Rocker switch
@@ -195,7 +205,7 @@ Rocker switches were used as user input controls for the system. These switches 
 Limit switches were used to detect the end positions of the moving carriages. These switches help prevent the mechanism from traveling beyond its intended range. When a carriage reaches a limit switch, the switch sends a signal to the TMS4210 motor controller. This allows the software to stop or home the motor, protecting the mechanical system from overtravel or damage. The limit switch is shown in Figure 18.
 
 <p align="center">
-  
+  <img width="3024" height="4032" alt="IMG_7506" src="https://github.com/user-attachments/assets/196b0a8b-8f70-4dc5-829c-dcd4af5642d0" />
 </p>
 <p align="center">
   Figure 18. Limit switch 
