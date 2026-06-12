@@ -15,8 +15,6 @@
   - [LCD Driver](#lcd-driver)
 - [Modeling](#modeling)
 - [Improvements](#improvements)
-- [Reflections](#reflections)
-
 
 ## Project Overview
 [Back to top](#Table-of-Contents)
@@ -36,10 +34,8 @@ Overall, this project demonstrates the development of a complete embedded mechat
   Figure 1. Ice Cold Beer Game
 </p>
 
-
 ## Major Hardware
 [Back to top](#Table-of-Contents)
-
 
 ### PCB
 
@@ -96,7 +92,6 @@ The board was powered using a 12 V wall adapter. A buck converter, the LM2576, s
   Figure 9. LDO fix to remove thermal heat
 </p>
 
-
 ### Mechanical Design
 [Back to top](#Table-of-Contents)
 
@@ -109,12 +104,6 @@ Guide rods are used to constrain the carriage so that it moves only in the verti
 Overall, the system uses two stepper-driven lead screw assemblies to control the vertical position of each side of the mechanism. By moving the two sides independently, the system can adjust the angle of the board or guide bar, allowing controlled movement of the ball during gameplay.
 
 The other components are static and to structurally hold the assembly together. A CAD model of the system is shown in Figure 10. The overall system is shown in Figure 11. The lift assembly and sliding are shown in Figure 12. The fixed joint that holds the linear sensor is shown in Figure 13. 
-
-
-
-
-
-
 
 <p align="center">
 <img width="1065" height="1263" alt="Screenshot 2026-06-11 170058" src="https://github.com/user-attachments/assets/c10e9521-dd13-4c37-886f-d4bc13955d07" />
@@ -140,16 +129,6 @@ The other components are static and to structurally hold the assembly together. 
 <p align="center">
   Figure 13. Fixed joint with the linear sensor
 </p>
-
-
-
-
-
-
-
-
-
-
 
 ### Stepper Motors
 [Back to top](#Table-of-Contents)
@@ -222,8 +201,7 @@ Limit switches were used to detect the end positions of the moving carriages. Th
 ## Modeling
 [Back to top](#Table-of-Contents)
 
-## Improvements
+## Improvements and Reflection
 [Back to top](#Table-of-Contents)
 
-## Reflection
-[Back to top](#Table-of-Contents)
+This was our first time designing a custom PCB. Our board wasn't perfect and required some quick fixes to make it work. With having to make these quick fixes we leanr
