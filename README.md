@@ -144,11 +144,31 @@ The other components are static and to structurally hold the assembly together. 
 ### Stepper Motors
 [Back to top](#Table-of-Contents)
 
+The system uses 42BYGHM809 stepper motors to drive the vertical motion assemblies on each side of the game board. These motors were selected because they provide precise position control, which is necessary for accurately raising and lowering each side of the mechanism. These steppers have 400 steps/rev which allowed for greater precision and smoother rotation (less notchy). The stepper motor is shown in Figure 14.
+
+<p align="center">
+  <img width="4032" height="3024" alt="IMG_7501" src="https://github.com/user-attachments/assets/fb44edb9-66a9-47ac-b75f-9a6ad88d8b1d" />
+</p>
+<p align="center">
+  Figure 14. Stepper motor
+</p>
+
 ### Distance Sensor
 [Back to top](#Table-of-Contents)
 
+A Pololu Distance Sensor V2 with pulse width output and a maximum sensing range of 50 cm, item 5562, was used to measure the position of the ball on the game board. The sensor outputs a pulse width signal that corresponds to the measured distance, allowing the microcontroller to determine how far the ball is from the sensor. This distance measurement can then be used as feedback for tracking the ball’s position during gameplay. The distance sensor is shown in Figure 15.
+
+<p align="center">
+  
+</p>
+<p align="center">
+  Figure 15. Distance sensor
+</p>
+
 ### LCD
 [Back to top](#Table-of-Contents)
+
+##MAX
 
 ### Switches
 [Back to top](#Table-of-Contents)
