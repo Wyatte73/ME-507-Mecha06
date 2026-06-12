@@ -168,13 +168,38 @@ A Pololu Distance Sensor V2 with pulse width output and a maximum sensing range 
 ### LCD
 [Back to top](#Table-of-Contents)
 
-##MAX
+MAX
+
+<p align="center">
+  
+</p>
+<p align="center">
+  Figure 16. LCD
+</p>
 
 ### Switches
 [Back to top](#Table-of-Contents)
 
+Rocker switches were used as user input controls for the system. These switches provide a simple and reliable way for the user to control the motors up or down. Since they are single-pole double-throw switches, each switch can route a signal between two different states or positions.
+
+<p align="center">
+  
+</p>
+<p align="center">
+  Figure 17. Rocker switch
+</p>
+
 ### Limit Switches
 [Back to top](#Table-of-Contents)
+
+Limit switches were used to detect the end positions of the moving carriages. These switches help prevent the mechanism from traveling beyond its intended range. When a carriage reaches a limit switch, the switch sends a signal to the TMS4210 motor controller. This allows the software to stop or home the motor, protecting the mechanical system from overtravel or damage. The limit switch is shown in Figure 18.
+
+<p align="center">
+  
+</p>
+<p align="center">
+  Figure 18. Limit switch 
+</p>
 
 ## Software
 [Back to top](#Table-of-Contents)
