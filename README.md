@@ -100,7 +100,46 @@ The board was powered using a 12 V wall adapter. A buck converter, the LM2576, s
 ### Mechanical Design
 [Back to top](#Table-of-Contents)
 
-The mechanical design has two components on either side of the game board that are able to move up and down independently of one another. To allow the components to move up and down, a power screw is turned by a stepper motor to make the carriages move up and down with the use of a power screw nut. 
+The mechanical design uses two independently controlled lift assemblies located on opposite sides of the game board. This design works similarly to the mechanism used in the Ice Cold Beer arcade game, where each side of the support bar can move up and down independently to control the tilt of the playing surface or guide mechanism.
+
+Each side of the mechanism is driven by a stepper motor connected to a lead screw. As the stepper motor rotates the lead screw, a lead screw nut converts the rotational motion into linear motion, causing the carriage to move vertically. This allows each side of the board mechanism to be raised or lowered independently.
+
+Guide rods are used to constrain the carriage so that it moves only in the vertical direction. These rods prevent the carriage from twisting or rotating as the lead screw turns. The center rod is supported in a way that allows it to rotate freely while still maintaining proper alignment. One end of the rod is fixed axially and only allowed to rotate, while the opposite end is allowed to both rotate and slide. This prevents the assembly from being over-constrained and helps account for small alignment errors during motion.
+
+Overall, the system uses two stepper-driven lead screw assemblies to control the vertical position of each side of the mechanism. By moving the two sides independently, the system can adjust the angle of the board or guide bar, allowing controlled movement of the ball during gameplay.
+
+The other components are static and to structurally hold the assembly together. A CAD model of the system is shown in Figure 10. The overall system is shown in Figure 11. The lift assembly and sliding are shown in Figure 12. The fixed joint that holds the linear sensor is shown in Figure 13. 
+
+
+<img width="4032" height="3024" alt="IMG_7500" src="https://github.com/user-attachments/assets/79fc4598-c3be-4e88-92cd-2aa8df45691f" />
+<img width="4032" height="3024" alt="IMG_7501" src="https://github.com/user-attachments/assets/fb44edb9-66a9-47ac-b75f-9a6ad88d8b1d" />
+<img width="4032" height="3024" alt="IMG_7499" src="https://github.com/user-attachments/assets/1a1af062-43d6-4c4a-a093-bb33e6c61746" />
+
+
+<p align="center">
+<img width="1065" height="1263" alt="Screenshot 2026-06-11 170058" src="https://github.com/user-attachments/assets/c10e9521-dd13-4c37-886f-d4bc13955d07" />
+</p>
+<p align="center">
+  Figure 10. CAD model of the system
+</p>
+<p align="center">
+ 
+</p>
+<p align="center">
+  Figure 11. Physical system
+</p>
+<p align="center">
+ 
+</p>
+<p align="center">
+  Figure 12. Lift assembly and sliding joint
+</p>
+<p align="center">
+ 
+</p>
+<p align="center">
+  Figure 13. Fixed joint with the linear sensor
+</p>
 
 ### Stepper Motors
 [Back to top](#Table-of-Contents)
