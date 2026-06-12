@@ -111,9 +111,9 @@ Overall, the system uses two stepper-driven lead screw assemblies to control the
 The other components are static and to structurally hold the assembly together. A CAD model of the system is shown in Figure 10. The overall system is shown in Figure 11. The lift assembly and sliding are shown in Figure 12. The fixed joint that holds the linear sensor is shown in Figure 13. 
 
 
-<img width="4032" height="3024" alt="IMG_7500" src="https://github.com/user-attachments/assets/79fc4598-c3be-4e88-92cd-2aa8df45691f" />
-<img width="4032" height="3024" alt="IMG_7501" src="https://github.com/user-attachments/assets/fb44edb9-66a9-47ac-b75f-9a6ad88d8b1d" />
-<img width="4032" height="3024" alt="IMG_7499" src="https://github.com/user-attachments/assets/1a1af062-43d6-4c4a-a093-bb33e6c61746" />
+
+
+
 
 
 <p align="center">
@@ -123,19 +123,19 @@ The other components are static and to structurally hold the assembly together. 
   Figure 10. CAD model of the system
 </p>
 <p align="center">
- 
+ <img width="4032" height="3024" alt="IMG_7499" src="https://github.com/user-attachments/assets/1a1af062-43d6-4c4a-a093-bb33e6c61746" />
 </p>
 <p align="center">
   Figure 11. Physical system
 </p>
 <p align="center">
- 
+<img width="4032" height="3024" alt="IMG_7500" src="https://github.com/user-attachments/assets/79fc4598-c3be-4e88-92cd-2aa8df45691f" />
 </p>
 <p align="center">
   Figure 12. Lift assembly and sliding joint
 </p>
 <p align="center">
- 
+  <img width="4032" height="3024" alt="IMG_7501" src="https://github.com/user-attachments/assets/fb44edb9-66a9-47ac-b75f-9a6ad88d8b1d" />
 </p>
 <p align="center">
   Figure 13. Fixed joint with the linear sensor
