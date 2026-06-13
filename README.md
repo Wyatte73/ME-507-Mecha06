@@ -2,7 +2,7 @@
 
 ## Documentation
 
-[View the Doxygen documentation](https://yourusername.github.io/your-repo-name/)
+[View the Doxygen documentation](https://wyatte73.github.io/ME-507-Mecha06/)
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
