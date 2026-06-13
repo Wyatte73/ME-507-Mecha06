@@ -2,9 +2,7 @@
 
 ## Documentation
 
-The Doxygen documentation can be viewed here:
-
-file:///C:/Users/Wyatt/Downloads/ME507/docs/html/index.html
+[View the Doxygen documentation](https://wyatte73.github.io/ME-507-Mecha06/)
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
