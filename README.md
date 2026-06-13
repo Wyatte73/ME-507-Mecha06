@@ -31,7 +31,7 @@ The Doxygen documentation can be viewed here:
 To regenerate the Doxygen documentation, run:
 
 ```bash
-doxygen Doxyfile
+doxygen Doxyfile```
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
