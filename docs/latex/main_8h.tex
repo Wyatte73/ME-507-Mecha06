@@ -1,0 +1,440 @@
+\doxysection{main.\+h File Reference}
+\hypertarget{main_8h}{}\label{main_8h}\index{main.h@{main.h}}
+
+
+:\+ Header file for \doxylink{main_8c}{main.\+c}.  
+
+
+{\ttfamily \+\#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a8a6cc3e2171b153f3d2b03a7de07b640}{OUT\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+0
+\begin{DoxyCompactList}\small\item\em GPIO pin used for the output signal. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ad3071393e9843f2d265106d5766af3b9}{OUT\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a8cc091dd8e1b0850b60e2092581723cb}{RS\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+1
+\begin{DoxyCompactList}\small\item\em LCD Register Select pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a58ffa5b505a5859a1e42dc38a2b897af}{RS\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_aa69614562cfbabf0113eb6d6fd9e859c}{RW\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+2
+\begin{DoxyCompactList}\small\item\em LCD Read/\+\+Write control pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a8907dc19a7cf8ec9282769cb13cd22fe}{RW\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ab519d824c0500889c414053a74260238}{DB0\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+3
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 0 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ae5e85729b30485c0650644200ffd6e34}{DB0\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a23767bab988aba439a02f53418fa3751}{DB1\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+4
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 1 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_afa09a37422fc6006201ef8b0bd4ec8c0}{DB1\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a5930d8d9cd1dc08d731e2d6db38efdb2}{DB2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+5
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 2 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a476f0d6bd4f126a94c044eb8ed311ac7}{DB2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ade0e2eac24c44f89bc4d002380974057}{DB3\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 3 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a40659dbe55e153344bad05ab581abc29}{DB3\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_aa3763cc663a81467797599db98de17ee}{DB4\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+7
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 4 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ad177d1f169426643c695ef21262290e0}{DB4\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ae606cd03b3e62079576849a66673ac85}{DB5\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+0
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 5 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_aa5d828bd103feae8db7c8fc51dc42315}{DB5\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a5c79bae54ff481ea72e0a31e4ab8cf59}{DB6\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+1
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 6 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a364d592789e487317a2e2f2d5e179c66}{DB6\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a2412c465207f7743c2d59b5fe3757415}{DB7\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+2
+\begin{DoxyCompactList}\small\item\em LCD data bus bit 7 pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a777467d1187256426473b4d1f072d520}{DB7\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a11d8159a4446baa3c5f607e468cf2c09}{EN\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+12
+\begin{DoxyCompactList}\small\item\em LCD Enable pin. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a5df3937da641196d35075528851e4c45}{EN\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a18eb306aa63775c88d6c06ccb1d7b313}{n\+Cs2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+13
+\begin{DoxyCompactList}\small\item\em Active-\/low chip select pin for the SPI-\/controlled device. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a6ba6e9cb41e517eb81a3a2e130a2182a}{n\+Cs2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ac969c4fccd009dd70b69992d92cbe81a}{LED\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+8
+\begin{DoxyCompactList}\small\item\em GPIO pin connected to the LED. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a3cf393d21586a4097159246e8aca13a2}{LED\+\_\+\+GPIO\+\_\+\+Port}}~GPIOA
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a36ed04827b6f5a31eedb14d236d44569}{DN2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+4
+\begin{DoxyCompactList}\small\item\em Input pin for down button 2. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a197876a74065d5793bdd0ed9bfbc0751}{DN2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ad071f972cc9741491a28f9c5b05e7081}{UP2\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+5
+\begin{DoxyCompactList}\small\item\em Input pin for up button 2. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a78c0479d012d73ba0148b3a1c9be9ce0}{UP2\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a0d0792805ab76b78b1337b67b1090804}{DN1\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+6
+\begin{DoxyCompactList}\small\item\em Input pin for down button 1. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a57b032d2e6a442a4993727959478a5ea}{DN1\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\item 
+\+\#define \doxymbox{\hyperlink{main_8h_ab3d0789a788087f7b3d08c88e54f485c}{UP1\+\_\+\+Pin}}~GPIO\+\_\+\+PIN\+\_\+7
+\begin{DoxyCompactList}\small\item\em Input pin for up button 1. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8h_a91a90bb3d539779eba18a418bf72baf0}{UP1\+\_\+\+GPIO\+\_\+\+Port}}~GPIOB
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8h_ae70bce6c39d0b570a7523b86738cec4b}{HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Performs post-\/initialization setup for timer GPIO pins. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em Handles application errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+:\+ Header file for \doxylink{main_8c}{main.\+c}. 
+
+This file contains common application definitions, GPIO pin mappings, and function prototypes used by the main application.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{main_8h_doc-define-members}
+\Hypertarget{main_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8h_ae5e85729b30485c0650644200ffd6e34}\index{main.h@{main.h}!DB0\_GPIO\_Port@{DB0\_GPIO\_Port}}
+\index{DB0\_GPIO\_Port@{DB0\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB0\_GPIO\_Port}{DB0\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_ae5e85729b30485c0650644200ffd6e34} 
+\+\#define DB0\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_ab519d824c0500889c414053a74260238}\index{main.h@{main.h}!DB0\_Pin@{DB0\_Pin}}
+\index{DB0\_Pin@{DB0\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB0\_Pin}{DB0\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_ab519d824c0500889c414053a74260238} 
+\+\#define DB0\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+3}
+
+
+
+LCD data bus bit 0 pin. 
+
+\Hypertarget{main_8h_afa09a37422fc6006201ef8b0bd4ec8c0}\index{main.h@{main.h}!DB1\_GPIO\_Port@{DB1\_GPIO\_Port}}
+\index{DB1\_GPIO\_Port@{DB1\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB1\_GPIO\_Port}{DB1\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_afa09a37422fc6006201ef8b0bd4ec8c0} 
+\+\#define DB1\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_a23767bab988aba439a02f53418fa3751}\index{main.h@{main.h}!DB1\_Pin@{DB1\_Pin}}
+\index{DB1\_Pin@{DB1\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB1\_Pin}{DB1\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a23767bab988aba439a02f53418fa3751} 
+\+\#define DB1\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+4}
+
+
+
+LCD data bus bit 1 pin. 
+
+\Hypertarget{main_8h_a476f0d6bd4f126a94c044eb8ed311ac7}\index{main.h@{main.h}!DB2\_GPIO\_Port@{DB2\_GPIO\_Port}}
+\index{DB2\_GPIO\_Port@{DB2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB2\_GPIO\_Port}{DB2\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a476f0d6bd4f126a94c044eb8ed311ac7} 
+\+\#define DB2\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_a5930d8d9cd1dc08d731e2d6db38efdb2}\index{main.h@{main.h}!DB2\_Pin@{DB2\_Pin}}
+\index{DB2\_Pin@{DB2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB2\_Pin}{DB2\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a5930d8d9cd1dc08d731e2d6db38efdb2} 
+\+\#define DB2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+5}
+
+
+
+LCD data bus bit 2 pin. 
+
+\Hypertarget{main_8h_a40659dbe55e153344bad05ab581abc29}\index{main.h@{main.h}!DB3\_GPIO\_Port@{DB3\_GPIO\_Port}}
+\index{DB3\_GPIO\_Port@{DB3\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB3\_GPIO\_Port}{DB3\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a40659dbe55e153344bad05ab581abc29} 
+\+\#define DB3\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_ade0e2eac24c44f89bc4d002380974057}\index{main.h@{main.h}!DB3\_Pin@{DB3\_Pin}}
+\index{DB3\_Pin@{DB3\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB3\_Pin}{DB3\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_ade0e2eac24c44f89bc4d002380974057} 
+\+\#define DB3\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+
+
+LCD data bus bit 3 pin. 
+
+\Hypertarget{main_8h_ad177d1f169426643c695ef21262290e0}\index{main.h@{main.h}!DB4\_GPIO\_Port@{DB4\_GPIO\_Port}}
+\index{DB4\_GPIO\_Port@{DB4\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB4\_GPIO\_Port}{DB4\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_ad177d1f169426643c695ef21262290e0} 
+\+\#define DB4\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_aa3763cc663a81467797599db98de17ee}\index{main.h@{main.h}!DB4\_Pin@{DB4\_Pin}}
+\index{DB4\_Pin@{DB4\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB4\_Pin}{DB4\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_aa3763cc663a81467797599db98de17ee} 
+\+\#define DB4\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+7}
+
+
+
+LCD data bus bit 4 pin. 
+
+\Hypertarget{main_8h_aa5d828bd103feae8db7c8fc51dc42315}\index{main.h@{main.h}!DB5\_GPIO\_Port@{DB5\_GPIO\_Port}}
+\index{DB5\_GPIO\_Port@{DB5\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB5\_GPIO\_Port}{DB5\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_aa5d828bd103feae8db7c8fc51dc42315} 
+\+\#define DB5\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_ae606cd03b3e62079576849a66673ac85}\index{main.h@{main.h}!DB5\_Pin@{DB5\_Pin}}
+\index{DB5\_Pin@{DB5\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB5\_Pin}{DB5\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_ae606cd03b3e62079576849a66673ac85} 
+\+\#define DB5\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+0}
+
+
+
+LCD data bus bit 5 pin. 
+
+\Hypertarget{main_8h_a364d592789e487317a2e2f2d5e179c66}\index{main.h@{main.h}!DB6\_GPIO\_Port@{DB6\_GPIO\_Port}}
+\index{DB6\_GPIO\_Port@{DB6\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB6\_GPIO\_Port}{DB6\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a364d592789e487317a2e2f2d5e179c66} 
+\+\#define DB6\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_a5c79bae54ff481ea72e0a31e4ab8cf59}\index{main.h@{main.h}!DB6\_Pin@{DB6\_Pin}}
+\index{DB6\_Pin@{DB6\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB6\_Pin}{DB6\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a5c79bae54ff481ea72e0a31e4ab8cf59} 
+\+\#define DB6\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+1}
+
+
+
+LCD data bus bit 6 pin. 
+
+\Hypertarget{main_8h_a777467d1187256426473b4d1f072d520}\index{main.h@{main.h}!DB7\_GPIO\_Port@{DB7\_GPIO\_Port}}
+\index{DB7\_GPIO\_Port@{DB7\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB7\_GPIO\_Port}{DB7\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a777467d1187256426473b4d1f072d520} 
+\+\#define DB7\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_a2412c465207f7743c2d59b5fe3757415}\index{main.h@{main.h}!DB7\_Pin@{DB7\_Pin}}
+\index{DB7\_Pin@{DB7\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DB7\_Pin}{DB7\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a2412c465207f7743c2d59b5fe3757415} 
+\+\#define DB7\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+2}
+
+
+
+LCD data bus bit 7 pin. 
+
+\Hypertarget{main_8h_a57b032d2e6a442a4993727959478a5ea}\index{main.h@{main.h}!DN1\_GPIO\_Port@{DN1\_GPIO\_Port}}
+\index{DN1\_GPIO\_Port@{DN1\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DN1\_GPIO\_Port}{DN1\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a57b032d2e6a442a4993727959478a5ea} 
+\+\#define DN1\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_a0d0792805ab76b78b1337b67b1090804}\index{main.h@{main.h}!DN1\_Pin@{DN1\_Pin}}
+\index{DN1\_Pin@{DN1\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DN1\_Pin}{DN1\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a0d0792805ab76b78b1337b67b1090804} 
+\+\#define DN1\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+6}
+
+
+
+Input pin for down button 1. 
+
+\Hypertarget{main_8h_a197876a74065d5793bdd0ed9bfbc0751}\index{main.h@{main.h}!DN2\_GPIO\_Port@{DN2\_GPIO\_Port}}
+\index{DN2\_GPIO\_Port@{DN2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DN2\_GPIO\_Port}{DN2\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a197876a74065d5793bdd0ed9bfbc0751} 
+\+\#define DN2\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_a36ed04827b6f5a31eedb14d236d44569}\index{main.h@{main.h}!DN2\_Pin@{DN2\_Pin}}
+\index{DN2\_Pin@{DN2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DN2\_Pin}{DN2\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a36ed04827b6f5a31eedb14d236d44569} 
+\+\#define DN2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+4}
+
+
+
+Input pin for down button 2. 
+
+\Hypertarget{main_8h_a5df3937da641196d35075528851e4c45}\index{main.h@{main.h}!EN\_GPIO\_Port@{EN\_GPIO\_Port}}
+\index{EN\_GPIO\_Port@{EN\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{EN\_GPIO\_Port}{EN\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a5df3937da641196d35075528851e4c45} 
+\+\#define EN\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_a11d8159a4446baa3c5f607e468cf2c09}\index{main.h@{main.h}!EN\_Pin@{EN\_Pin}}
+\index{EN\_Pin@{EN\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{EN\_Pin}{EN\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a11d8159a4446baa3c5f607e468cf2c09} 
+\+\#define EN\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+12}
+
+
+
+LCD Enable pin. 
+
+\Hypertarget{main_8h_a3cf393d21586a4097159246e8aca13a2}\index{main.h@{main.h}!LED\_GPIO\_Port@{LED\_GPIO\_Port}}
+\index{LED\_GPIO\_Port@{LED\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LED\_GPIO\_Port}{LED\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a3cf393d21586a4097159246e8aca13a2} 
+\+\#define LED\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_ac969c4fccd009dd70b69992d92cbe81a}\index{main.h@{main.h}!LED\_Pin@{LED\_Pin}}
+\index{LED\_Pin@{LED\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{LED\_Pin}{LED\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_ac969c4fccd009dd70b69992d92cbe81a} 
+\+\#define LED\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+8}
+
+
+
+GPIO pin connected to the LED. 
+
+\Hypertarget{main_8h_a6ba6e9cb41e517eb81a3a2e130a2182a}\index{main.h@{main.h}!nCs2\_GPIO\_Port@{nCs2\_GPIO\_Port}}
+\index{nCs2\_GPIO\_Port@{nCs2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{nCs2\_GPIO\_Port}{nCs2\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a6ba6e9cb41e517eb81a3a2e130a2182a} 
+\+\#define n\+Cs2\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_a18eb306aa63775c88d6c06ccb1d7b313}\index{main.h@{main.h}!nCs2\_Pin@{nCs2\_Pin}}
+\index{nCs2\_Pin@{nCs2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{nCs2\_Pin}{nCs2\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a18eb306aa63775c88d6c06ccb1d7b313} 
+\+\#define n\+Cs2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+13}
+
+
+
+Active-\/low chip select pin for the SPI-\/controlled device. 
+
+\Hypertarget{main_8h_ad3071393e9843f2d265106d5766af3b9}\index{main.h@{main.h}!OUT\_GPIO\_Port@{OUT\_GPIO\_Port}}
+\index{OUT\_GPIO\_Port@{OUT\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{OUT\_GPIO\_Port}{OUT\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_ad3071393e9843f2d265106d5766af3b9} 
+\+\#define OUT\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_a8a6cc3e2171b153f3d2b03a7de07b640}\index{main.h@{main.h}!OUT\_Pin@{OUT\_Pin}}
+\index{OUT\_Pin@{OUT\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{OUT\_Pin}{OUT\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a8a6cc3e2171b153f3d2b03a7de07b640} 
+\+\#define OUT\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+0}
+
+
+
+GPIO pin used for the output signal. 
+
+\Hypertarget{main_8h_a58ffa5b505a5859a1e42dc38a2b897af}\index{main.h@{main.h}!RS\_GPIO\_Port@{RS\_GPIO\_Port}}
+\index{RS\_GPIO\_Port@{RS\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{RS\_GPIO\_Port}{RS\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a58ffa5b505a5859a1e42dc38a2b897af} 
+\+\#define RS\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_a8cc091dd8e1b0850b60e2092581723cb}\index{main.h@{main.h}!RS\_Pin@{RS\_Pin}}
+\index{RS\_Pin@{RS\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{RS\_Pin}{RS\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_a8cc091dd8e1b0850b60e2092581723cb} 
+\+\#define RS\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+1}
+
+
+
+LCD Register Select pin. 
+
+\Hypertarget{main_8h_a8907dc19a7cf8ec9282769cb13cd22fe}\index{main.h@{main.h}!RW\_GPIO\_Port@{RW\_GPIO\_Port}}
+\index{RW\_GPIO\_Port@{RW\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{RW\_GPIO\_Port}{RW\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a8907dc19a7cf8ec9282769cb13cd22fe} 
+\+\#define RW\+\_\+\+GPIO\+\_\+\+Port~GPIOA}
+
+\Hypertarget{main_8h_aa69614562cfbabf0113eb6d6fd9e859c}\index{main.h@{main.h}!RW\_Pin@{RW\_Pin}}
+\index{RW\_Pin@{RW\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{RW\_Pin}{RW\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_aa69614562cfbabf0113eb6d6fd9e859c} 
+\+\#define RW\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+2}
+
+
+
+LCD Read/\+\+Write control pin. 
+
+\Hypertarget{main_8h_a91a90bb3d539779eba18a418bf72baf0}\index{main.h@{main.h}!UP1\_GPIO\_Port@{UP1\_GPIO\_Port}}
+\index{UP1\_GPIO\_Port@{UP1\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{UP1\_GPIO\_Port}{UP1\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a91a90bb3d539779eba18a418bf72baf0} 
+\+\#define UP1\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_ab3d0789a788087f7b3d08c88e54f485c}\index{main.h@{main.h}!UP1\_Pin@{UP1\_Pin}}
+\index{UP1\_Pin@{UP1\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{UP1\_Pin}{UP1\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_ab3d0789a788087f7b3d08c88e54f485c} 
+\+\#define UP1\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+7}
+
+
+
+Input pin for up button 1. 
+
+\Hypertarget{main_8h_a78c0479d012d73ba0148b3a1c9be9ce0}\index{main.h@{main.h}!UP2\_GPIO\_Port@{UP2\_GPIO\_Port}}
+\index{UP2\_GPIO\_Port@{UP2\_GPIO\_Port}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{UP2\_GPIO\_Port}{UP2\_GPIO\_Port}}
+{\footnotesize\ttfamily \label{main_8h_a78c0479d012d73ba0148b3a1c9be9ce0} 
+\+\#define UP2\+\_\+\+GPIO\+\_\+\+Port~GPIOB}
+
+\Hypertarget{main_8h_ad071f972cc9741491a28f9c5b05e7081}\index{main.h@{main.h}!UP2\_Pin@{UP2\_Pin}}
+\index{UP2\_Pin@{UP2\_Pin}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{UP2\_Pin}{UP2\_Pin}}
+{\footnotesize\ttfamily \label{main_8h_ad071f972cc9741491a28f9c5b05e7081} 
+\+\#define UP2\+\_\+\+Pin~GPIO\+\_\+\+PIN\+\_\+5}
+
+
+
+Input pin for up button 2. 
+
+
+
+\label{main_8h_doc-func-members}
+\Hypertarget{main_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8h_a1730ffe1e560465665eb47d9264826f9}\index{main.h@{main.h}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily \label{main_8h_a1730ffe1e560465665eb47d9264826f9} 
+void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Handles application errors. 
+
+This function is executed in case of error occurrence.
+
+This function is called when a HAL initialization or configuration function fails. The default implementation disables interrupts and enters an infinite loop.
+
+Handles application errors.
+
+The default implementation disables interrupts and enters an infinite loop.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Disable interrupts and remain in an infinite loop after an error.\Hypertarget{main_8h_ae70bce6c39d0b570a7523b86738cec4b}\index{main.h@{main.h}!HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}}
+\index{HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_MspPostInit()}{HAL\_TIM\_MspPostInit()}}
+{\footnotesize\ttfamily \label{main_8h_ae70bce6c39d0b570a7523b86738cec4b} 
+void HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim}{}\end{DoxyParamCaption})}
+
+
+
+Performs post-\/initialization setup for timer GPIO pins. 
+
+This function is generated by STM32\+Cube\+MX and is used to configure timer-\/related GPIO pins after the timer peripheral has been initialized.
+
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & Pointer to the timer handle being post-\/initialized. \\
+\hline
+\end{DoxyParams}

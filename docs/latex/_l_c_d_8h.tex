@@ -1,0 +1,142 @@
+\doxysection{LCD.\+h File Reference}
+\hypertarget{_l_c_d_8h}{}\label{_l_c_d_8h}\index{LCD.h@{LCD.h}}
+
+
+Header file for the parallel LCD driver.  
+
+
+{\ttfamily \+\#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Stores GPIO port and pin information for an 8-\/bit parallel LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_l_c_d_8h_a4b9aaaacbe4a4169cfb6b2362a28f151}{Init}} (\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}} inp)
+\begin{DoxyCompactList}\small\item\em Initializes the LCD. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_c_d_8h_a49d5006c0fb232fafbd8dfc2cef6f2a5}{Clear\+Dis}} (\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}} inp)
+\begin{DoxyCompactList}\small\item\em Clears the LCD display. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_c_d_8h_a7cefd70c3b4f1166113b86a3f8364daf}{Shift\+Cursor}} (\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}} inp, char dir)
+\begin{DoxyCompactList}\small\item\em Shifts the LCD cursor left or right. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_l_c_d_8h_a1ea97798cc8b786cedaa8281d5cf625f}{Put\+Char}} (\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}} inp, char dig)
+\begin{DoxyCompactList}\small\item\em Writes one character to the LCD at the current cursor location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the parallel LCD driver. 
+
+This file defines the \doxylink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t} structure and the public functions used to initialize and control an LCD using GPIO pins on an STM32 microcontroller. 
+
+\label{_l_c_d_8h_doc-func-members}
+\Hypertarget{_l_c_d_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_l_c_d_8h_a49d5006c0fb232fafbd8dfc2cef6f2a5}\index{LCD.h@{LCD.h}!ClearDis@{ClearDis}}
+\index{ClearDis@{ClearDis}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{ClearDis()}{ClearDis()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a49d5006c0fb232fafbd8dfc2cef6f2a5} 
+void Clear\+Dis (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}}}]{inp}{}\end{DoxyParamCaption})}
+
+
+
+Clears the LCD display. 
+
+Sends the clear display command to the LCD and waits for the command to complete.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure.\\
+\hline
+\end{DoxyParams}
+This function sends the LCD clear-\/display command. The command requires a longer delay than most LCD commands, so a delay is included before the data lines are cleared.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a4b9aaaacbe4a4169cfb6b2362a28f151}\index{LCD.h@{LCD.h}!Init@{Init}}
+\index{Init@{Init}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a4b9aaaacbe4a4169cfb6b2362a28f151} 
+void Init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}}}]{inp}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the LCD. 
+
+This function performs the startup sequence for an HD44780-\/style LCD operating in 8-\/bit mode. It clears the data lines, waits for the LCD to power up, configures the display mode, clears the display, sets the entry mode, and turns the display on.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure.\\
+\hline
+\end{DoxyParams}
+This function performs the standard HD44780 initialization sequence for 8-\/bit mode. It configures the display for 8-\/bit data, two display lines, and a 5x8 font. It then clears the display, sets the cursor entry mode, and turns the display on with the cursor and blinking disabled.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a1ea97798cc8b786cedaa8281d5cf625f}\index{LCD.h@{LCD.h}!PutChar@{PutChar}}
+\index{PutChar@{PutChar}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{PutChar()}{PutChar()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a1ea97798cc8b786cedaa8281d5cf625f} 
+void Put\+Char (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}}}]{inp}{, }\item[{char}]{dig}{}\end{DoxyParamCaption})}
+
+
+
+Writes one character to the LCD at the current cursor location. 
+
+Writes a single character to the LCD.
+
+This function places the ASCII value of the given character on the LCD data bus and pulses the enable pin to write it to the display.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure. \\
+\hline
+{\em dig} & Character to write to the LCD.\\
+\hline
+\end{DoxyParams}
+Writes one character to the LCD at the current cursor location.
+
+This function sets RS high for data mode, places the character\textquotesingle{}s ASCII value on the 8-\/bit data bus, pulses the enable pin, and clears the bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure. \\
+\hline
+{\em dig} & Character to display at the current LCD cursor position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_l_c_d_8h_a7cefd70c3b4f1166113b86a3f8364daf}\index{LCD.h@{LCD.h}!ShiftCursor@{ShiftCursor}}
+\index{ShiftCursor@{ShiftCursor}!LCD.h@{LCD.h}}
+\doxysubsubsection{\texorpdfstring{ShiftCursor()}{ShiftCursor()}}
+{\footnotesize\ttfamily \label{_l_c_d_8h_a7cefd70c3b4f1166113b86a3f8364daf} 
+void Shift\+Cursor (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}}}]{inp}{, }\item[{char}]{dir}{}\end{DoxyParamCaption})}
+
+
+
+Shifts the LCD cursor left or right. 
+
+The direction is selected using a character value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure. \\
+\hline
+{\em dir} & Direction to shift the cursor. Use \textquotesingle{}L\textquotesingle{} for left or \textquotesingle{}R\textquotesingle{} for right.\\
+\hline
+\end{DoxyParams}
+This function sends the LCD cursor-\/shift command. Passing \textquotesingle{}R\textquotesingle{} shifts the cursor right. Any other value shifts the cursor left.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & LCD pin configuration structure. \\
+\hline
+{\em dir} & Cursor direction. Use \textquotesingle{}R\textquotesingle{} for right or \textquotesingle{}L\textquotesingle{} for left. \\
+\hline
+\end{DoxyParams}

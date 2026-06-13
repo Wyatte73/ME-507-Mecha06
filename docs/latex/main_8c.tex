@@ -1,0 +1,550 @@
+\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
+
+
+:\+ Main program body.  
+
+
+{\ttfamily \+\#include "{}main.\+h"{}}\newline
+{\ttfamily \+\#include "{}LCD.\+h"{}}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Configures the system clock. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8c_a77a2401a35ddd9bd0b8fc28331b81381}{HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Timer input-\/capture callback used to measure input pulse width. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+SPI\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8c_ab9da65f935e805137e2eb4e18c5ab224}{hspi2}}
+\begin{DoxyCompactList}\small\item\em SPI2 peripheral handle. \end{DoxyCompactList}\item 
+TIM\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8c_a2c80fd5510e2990a59a5c90d745c716c}{htim2}}
+\begin{DoxyCompactList}\small\item\em TIM2 peripheral handle. \end{DoxyCompactList}\item 
+TIM\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8c_a85788cec5a97ee377e4ee2e74f026484}{htim4}}
+\begin{DoxyCompactList}\small\item\em TIM4 peripheral handle. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a4c0d9cb2fdbe93007ca5f30a65e36396}{en\+\_\+sd}} \+[4]\+ = \{0x34, 0x00, 0x00, 0x01\}
+\begin{DoxyCompactList}\small\item\em SPI command used to enable step/\+direction output on the motor driver. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a9214077ecbf6717e2cd7512d2e70c124}{V\+\_\+\+MIN}} \+[4]\+ = \{0b00000100, 0b00000000, 0b00000000, 0b00000100\}
+\begin{DoxyCompactList}\small\item\em SPI command used to configure the minimum motor velocity. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a8ec0a580e418547587b63e7fbf993460}{V\+\_\+\+MAX}} \+[4]\+ = \{0b00000110, 0b00000000, 0b00000000, 0b10000000\}
+\begin{DoxyCompactList}\small\item\em SPI command used to configure the maximum motor velocity. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a5b7ebc461e4bc167058a1ce7a80baba0}{PR\+\_\+\+DIV}} \+[4]\+ = \{0b00011000, 0b00000000, 0b00100010, 0b00000000\}
+\begin{DoxyCompactList}\small\item\em SPI command used to configure pulse divider and ramp divider values. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a122d488256a49f6460a13acafcf667ee}{A\+\_\+\+MAX}} \+[4]\+ = \{0b00001100, 0b00000000, 0b00000000, 0b00100000\}
+\begin{DoxyCompactList}\small\item\em SPI command used to configure the maximum acceleration. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_ab17d00bbcf59c67ad9de9ea195bf55c7}{V\+\_\+\+TAR}} \+[4]\+ = \{0b00001000, 0b00000000, 0b00000000, 0b00100000\}
+\begin{DoxyCompactList}\small\item\em SPI command buffer used to update the target velocity. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a8209e51cbcc10dcc67f2564446bf3790}{ref\+\_\+con}} \+[4]\+ = \{0b00010100, 0b00000000, 0b00000011, 0b00000010\}
+\begin{DoxyCompactList}\small\item\em SPI command used to configure reference switch settings and velocity mode. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a96471900a2ba2db27324a8246c315d09}{V\+\_\+\+TARU\+\_\+1}} \+[2]\+ = \{0b00001000, 0b00000000\}
+\begin{DoxyCompactList}\small\item\em Upper bytes for increasing target velocity by 128. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_adcab21b0d9d5d7a1f219e15b02ddf6c9}{V\+\_\+\+TARU\+\_\+2}} \+[2]\+ = \{0b00000000, 0b10000000\}
+\begin{DoxyCompactList}\small\item\em Lower bytes for increasing target velocity by 128. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_aa25078befad73664ac49ae8a5ec69419}{V\+\_\+\+TARD\+\_\+1}} \+[2]\+ = \{0b00001000, 0b00000000\}
+\begin{DoxyCompactList}\small\item\em Upper bytes for decreasing target velocity by 128. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a5b2e78007c2e8e3e16bfac7b75c82ed3}{V\+\_\+\+TARD\+\_\+2}} \+[2]\+ = \{0b00001111, 0b10000000\}
+\begin{DoxyCompactList}\small\item\em Lower bytes for decreasing target velocity by 128. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_ac27d85fb274873a2e882979ddfcab7f6}{V\+\_\+\+ACT\+\_\+1}} \+[4]\+ = \{0b00001001, 0b00000000, 0b00000000, 0b00000000\}
+\begin{DoxyCompactList}\small\item\em SPI command used to request or read the actual velocity value. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_ae48f5bd1a4a6d8669ee3160c4241543b}{V\+\_\+\+ACT\+\_\+R}} \+[4]\+
+\begin{DoxyCompactList}\small\item\em Buffer used to store actual velocity data returned over SPI. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a01ec2289f25186118fef85222f3f0497}{V\+\_\+old}}
+\begin{DoxyCompactList}\small\item\em Stores the previous target velocity byte. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a20302e2c99a60d3f612dba57e3f6333b}{count}} = 0
+\begin{DoxyCompactList}\small\item\em General-\/purpose counter used for LCD cursor shifting. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a92abda0bec7c1c978fe96f87aad18067}{dir}} = 0
+\begin{DoxyCompactList}\small\item\em Direction state variable. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}} \doxymbox{\hyperlink{main_8c_a5997cd89ed29586ea7d81c30e9ca3d39}{LCD}}
+\begin{DoxyCompactList}\small\item\em LCD GPIO pin mapping structure. \end{DoxyCompactList}\item 
+char \doxymbox{\hyperlink{main_8c_a74e7c9ee709b1f648f03832868efeb8d}{digs}} \+[5]\+
+\begin{DoxyCompactList}\small\item\em Character buffer used for formatting distance digits for the LCD. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a9f66cfa89489c3be09541452b307d5cb}{test}}
+\begin{DoxyCompactList}\small\item\em Temporary value used during distance calculations. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{main_8c_a148a44bd13e651774be92818c0ce777e}{loop}} = 0
+\begin{DoxyCompactList}\small\item\em Main loop counter. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \doxymbox{\hyperlink{main_8c_ad5f8b74c2fe4cec6b016ebb57bc51f81}{val1}} = 0
+\begin{DoxyCompactList}\small\item\em Timer count captured on the rising edge of the input pulse. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \doxymbox{\hyperlink{main_8c_a4f8cf089682bdbca367ccbd566ae3297}{val2}} = 0
+\begin{DoxyCompactList}\small\item\em Timer count captured on the falling edge of the input pulse. \end{DoxyCompactList}\item 
+volatile uint32\+\_\+t \doxymbox{\hyperlink{main_8c_a3ce32a8e90418c1a21ddcf03b1ef70e5}{pulse\+\_\+width}} = 0
+\begin{DoxyCompactList}\small\item\em Measured pulse width in timer counts. \end{DoxyCompactList}\item 
+volatile uint8\+\_\+t \doxymbox{\hyperlink{main_8c_a4fd4bad32fe552c72622136bb0c4b4c0}{is\+\_\+rising\+\_\+edge}} = 1
+\begin{DoxyCompactList}\small\item\em Indicates which edge should be captured next. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{main_8c_ac1eca121018f0184b4a5200ec0da225f}{pulse\+\_\+raw}}
+\begin{DoxyCompactList}\small\item\em Converted pulse-\/width value used as the raw distance measurement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+:\+ Main program body. 
+
+This program initializes the STM32 peripherals, configures an SPI-\/controlled motor driver, initializes an LCD, measures an input pulse width using timer input capture, converts that measurement into a distance value, displays the distance on the LCD, and updates the motor target velocity over SPI.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{main_8c_doc-func-members}
+\Hypertarget{main_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily \label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+Handles application errors.
+
+The default implementation disables interrupts and enters an infinite loop.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+This function is executed in case of error occurrence.
+
+This function is called when a HAL initialization or configuration function fails. The default implementation disables interrupts and enters an infinite loop. Disable interrupts and remain in an infinite loop after an error.\Hypertarget{main_8c_a77a2401a35ddd9bd0b8fc28331b81381}\index{main.c@{main.c}!HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}}
+\index{HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_IC\_CaptureCallback()}{HAL\_TIM\_IC\_CaptureCallback()}}
+{\footnotesize\ttfamily \label{main_8c_a77a2401a35ddd9bd0b8fc28331b81381} 
+void HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim}{}\end{DoxyParamCaption})}
+
+
+
+Timer input-\/capture callback used to measure input pulse width. 
+
+This callback is called automatically by the HAL when an input-\/capture event occurs. It measures the time between a rising edge and a falling edge on TIM2 channel 1.
+
+The function first captures the rising-\/edge timer value, then switches the channel polarity to capture the falling edge. After the falling edge is captured, it calculates the pulse width and switches back to rising-\/edge capture for the next pulse.
+
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & Pointer to the timer handle that triggered the callback. \\
+\hline
+\end{DoxyParams}
+Ignore callbacks from timers other than TIM2.
+
+Capture the timer value at the rising edge.
+
+Switch input capture to detect the falling edge next.
+
+Capture the timer value at the falling edge.
+
+Calculate pulse width while accounting for timer overflow.
+
+Switch input capture back to rising edge for the next pulse.\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+This function initializes the HAL library, configures the system clock, initializes GPIO, SPI, and timer peripherals, configures the motor driver, initializes the LCD, starts input capture, and then continuously updates motor velocity and LCD distance output.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & Program return value. This function normally never returns. \\
+\hline
+\end{DoxyRetVals}
+Reset peripherals, initialize the Flash interface, and start Sys\+Tick.
+
+Configure the microcontroller system clock.
+
+Initialize all configured peripherals.
+
+Start PWM output on TIM4 channel 4.
+
+Send V\+\_\+\+MIN configuration to the motor driver.
+
+Send V\+\_\+\+MAX configuration to the motor driver.
+
+Send pulse divider and ramp divider configuration to the motor driver.
+
+Send maximum acceleration configuration to the motor driver.
+
+Send reference switch configuration and velocity mode setup.
+
+Enable step/\+direction output on the motor driver.
+
+Optional target velocity setup.
+
+This block is currently commented out. It can be used if target velocity should be written using separate upper and lower byte transfers.
+
+Set LCD read/\+write pin high before LCD initialization.
+
+Initialize the LCD and display the starting distance message.
+
+Move LCD cursor back to the numeric distance field.
+
+Start TIM2 input capture interrupt on channel 1.
+
+Infinite application loop.
+
+Convert measured pulse width into a raw distance value.
+
+The conversion factor and offset are application-\/specific calibration values.
+
+Convert the measured distance value into a velocity command.
+
+The velocity value is scaled by 10 and clamped to a signed 12-\/bit range.
+
+Clamp velocity to the signed 12-\/bit range used by the motor driver.
+
+Place the velocity command into the SPI target velocity buffer.
+
+Transmit a new target velocity only when the value changes.
+
+Periodically update the LCD distance display.
+
+The LCD update is limited to every 10000 loop iterations to reduce flicker and avoid constantly rewriting the display.
+
+Display distance values less than 1 inch.
+
+Display distance values from 1 inch up to less than 10 inches.
+
+Display distance values greater than or equal to 10 inches.
+
+Return the LCD cursor to the beginning of the numeric field.
+
+Increment loop counter used for LCD update timing.\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily \label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Configures the system clock. 
+
+System Clock Configuration.
+
+Configures the main system clock using the HSE oscillator and PLL.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage.
+
+Initialize the RCC oscillators.
+
+Initialize CPU, AHB, and APB bus clocks.
+
+\label{main_8c_doc-var-members}
+\Hypertarget{main_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a122d488256a49f6460a13acafcf667ee}\index{main.c@{main.c}!A\_MAX@{A\_MAX}}
+\index{A\_MAX@{A\_MAX}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{A\_MAX}{A\_MAX}}
+{\footnotesize\ttfamily \label{main_8c_a122d488256a49f6460a13acafcf667ee} 
+uint8\+\_\+t A\+\_\+\+MAX\+[4]\+ = \{0b00001100, 0b00000000, 0b00000000, 0b00100000\}}
+
+
+
+SPI command used to configure the maximum acceleration. 
+
+\Hypertarget{main_8c_a20302e2c99a60d3f612dba57e3f6333b}\index{main.c@{main.c}!count@{count}}
+\index{count@{count}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{main_8c_a20302e2c99a60d3f612dba57e3f6333b} 
+uint8\+\_\+t count = 0}
+
+
+
+General-\/purpose counter used for LCD cursor shifting. 
+
+\Hypertarget{main_8c_a74e7c9ee709b1f648f03832868efeb8d}\index{main.c@{main.c}!digs@{digs}}
+\index{digs@{digs}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{digs}{digs}}
+{\footnotesize\ttfamily \label{main_8c_a74e7c9ee709b1f648f03832868efeb8d} 
+char digs\+[5]\+}
+
+
+
+Character buffer used for formatting distance digits for the LCD. 
+
+\Hypertarget{main_8c_a92abda0bec7c1c978fe96f87aad18067}\index{main.c@{main.c}!dir@{dir}}
+\index{dir@{dir}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily \label{main_8c_a92abda0bec7c1c978fe96f87aad18067} 
+uint8\+\_\+t dir = 0}
+
+
+
+Direction state variable. 
+
+\Hypertarget{main_8c_a4c0d9cb2fdbe93007ca5f30a65e36396}\index{main.c@{main.c}!en\_sd@{en\_sd}}
+\index{en\_sd@{en\_sd}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{en\_sd}{en\_sd}}
+{\footnotesize\ttfamily \label{main_8c_a4c0d9cb2fdbe93007ca5f30a65e36396} 
+uint8\+\_\+t en\+\_\+sd\+[4]\+ = \{0x34, 0x00, 0x00, 0x01\}}
+
+
+
+SPI command used to enable step/\+direction output on the motor driver. 
+
+\Hypertarget{main_8c_ab9da65f935e805137e2eb4e18c5ab224}\index{main.c@{main.c}!hspi2@{hspi2}}
+\index{hspi2@{hspi2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hspi2}{hspi2}}
+{\footnotesize\ttfamily \label{main_8c_ab9da65f935e805137e2eb4e18c5ab224} 
+SPI\+\_\+\+Handle\+Type\+Def hspi2}
+
+
+
+SPI2 peripheral handle. 
+
+This handle is used for SPI communication with the external motor driver. \Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\index{main.c@{main.c}!htim2@{htim2}}
+\index{htim2@{htim2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim2}{htim2}}
+{\footnotesize\ttfamily \label{main_8c_a2c80fd5510e2990a59a5c90d745c716c} 
+TIM\+\_\+\+Handle\+Type\+Def htim2}
+
+
+
+TIM2 peripheral handle. 
+
+TIM2 is used in input-\/capture mode to measure pulse width. \Hypertarget{main_8c_a85788cec5a97ee377e4ee2e74f026484}\index{main.c@{main.c}!htim4@{htim4}}
+\index{htim4@{htim4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim4}{htim4}}
+{\footnotesize\ttfamily \label{main_8c_a85788cec5a97ee377e4ee2e74f026484} 
+TIM\+\_\+\+Handle\+Type\+Def htim4}
+
+
+
+TIM4 peripheral handle. 
+
+TIM4 is used to generate a PWM signal. \Hypertarget{main_8c_a4fd4bad32fe552c72622136bb0c4b4c0}\index{main.c@{main.c}!is\_rising\_edge@{is\_rising\_edge}}
+\index{is\_rising\_edge@{is\_rising\_edge}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{is\_rising\_edge}{is\_rising\_edge}}
+{\footnotesize\ttfamily \label{main_8c_a4fd4bad32fe552c72622136bb0c4b4c0} 
+volatile uint8\+\_\+t is\+\_\+rising\+\_\+edge = 1}
+
+
+
+Indicates which edge should be captured next. 
+
+A value of 1 means the next expected edge is rising. A value of 0 means the next expected edge is falling. \Hypertarget{main_8c_a5997cd89ed29586ea7d81c30e9ca3d39}\index{main.c@{main.c}!LCD@{LCD}}
+\index{LCD@{LCD}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{LCD}{LCD}}
+{\footnotesize\ttfamily \label{main_8c_a5997cd89ed29586ea7d81c30e9ca3d39} 
+\doxymbox{\hyperlink{struct_l_c_d__param__t}{LCD\+\_\+param\+\_\+t}} LCD}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a58ffa5b505a5859a1e42dc38a2b897af}{RS\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_a8cc091dd8e1b0850b60e2092581723cb}{RS\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a5df3937da641196d35075528851e4c45}{EN\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_a11d8159a4446baa3c5f607e468cf2c09}{EN\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a8907dc19a7cf8ec9282769cb13cd22fe}{RW\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_aa69614562cfbabf0113eb6d6fd9e859c}{RW\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_ae5e85729b30485c0650644200ffd6e34}{DB0\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_ab519d824c0500889c414053a74260238}{DB0\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_afa09a37422fc6006201ef8b0bd4ec8c0}{DB1\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_a23767bab988aba439a02f53418fa3751}{DB1\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a476f0d6bd4f126a94c044eb8ed311ac7}{DB2\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_a5930d8d9cd1dc08d731e2d6db38efdb2}{DB2\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a40659dbe55e153344bad05ab581abc29}{DB3\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_ade0e2eac24c44f89bc4d002380974057}{DB3\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_ad177d1f169426643c695ef21262290e0}{DB4\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_aa3763cc663a81467797599db98de17ee}{DB4\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_aa5d828bd103feae8db7c8fc51dc42315}{DB5\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_ae606cd03b3e62079576849a66673ac85}{DB5\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a364d592789e487317a2e2f2d5e179c66}{DB6\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_a5c79bae54ff481ea72e0a31e4ab8cf59}{DB6\_Pin}},}
+\DoxyCodeLine{\ \ \ \ \doxymbox{\hyperlink{main_8h_a777467d1187256426473b4d1f072d520}{DB7\_GPIO\_Port}},\ \doxymbox{\hyperlink{main_8h_a2412c465207f7743c2d59b5fe3757415}{DB7\_Pin}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+LCD GPIO pin mapping structure. 
+
+This structure connects the LCD control and data signals to the STM32 GPIO ports and pins defined in \doxylink{main_8h}{main.\+h}. \Hypertarget{main_8c_a148a44bd13e651774be92818c0ce777e}\index{main.c@{main.c}!loop@{loop}}
+\index{loop@{loop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily \label{main_8c_a148a44bd13e651774be92818c0ce777e} 
+uint32\+\_\+t loop = 0}
+
+
+
+Main loop counter. 
+
+This counter is used to slow down LCD updates so the display is not rewritten every loop iteration. \Hypertarget{main_8c_a5b7ebc461e4bc167058a1ce7a80baba0}\index{main.c@{main.c}!PR\_DIV@{PR\_DIV}}
+\index{PR\_DIV@{PR\_DIV}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PR\_DIV}{PR\_DIV}}
+{\footnotesize\ttfamily \label{main_8c_a5b7ebc461e4bc167058a1ce7a80baba0} 
+uint8\+\_\+t PR\+\_\+\+DIV\+[4]\+ = \{0b00011000, 0b00000000, 0b00100010, 0b00000000\}}
+
+
+
+SPI command used to configure pulse divider and ramp divider values. 
+
+\Hypertarget{main_8c_ac1eca121018f0184b4a5200ec0da225f}\index{main.c@{main.c}!pulse\_raw@{pulse\_raw}}
+\index{pulse\_raw@{pulse\_raw}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pulse\_raw}{pulse\_raw}}
+{\footnotesize\ttfamily \label{main_8c_ac1eca121018f0184b4a5200ec0da225f} 
+float pulse\+\_\+raw}
+
+
+
+Converted pulse-\/width value used as the raw distance measurement. 
+
+\Hypertarget{main_8c_a3ce32a8e90418c1a21ddcf03b1ef70e5}\index{main.c@{main.c}!pulse\_width@{pulse\_width}}
+\index{pulse\_width@{pulse\_width}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pulse\_width}{pulse\_width}}
+{\footnotesize\ttfamily \label{main_8c_a3ce32a8e90418c1a21ddcf03b1ef70e5} 
+volatile uint32\+\_\+t pulse\+\_\+width = 0}
+
+
+
+Measured pulse width in timer counts. 
+
+This value is updated in the timer input-\/capture callback. \Hypertarget{main_8c_a8209e51cbcc10dcc67f2564446bf3790}\index{main.c@{main.c}!ref\_con@{ref\_con}}
+\index{ref\_con@{ref\_con}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ref\_con}{ref\_con}}
+{\footnotesize\ttfamily \label{main_8c_a8209e51cbcc10dcc67f2564446bf3790} 
+uint8\+\_\+t ref\+\_\+con\+[4]\+ = \{0b00010100, 0b00000000, 0b00000011, 0b00000010\}}
+
+
+
+SPI command used to configure reference switch settings and velocity mode. 
+
+\Hypertarget{main_8c_a9f66cfa89489c3be09541452b307d5cb}\index{main.c@{main.c}!test@{test}}
+\index{test@{test}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \label{main_8c_a9f66cfa89489c3be09541452b307d5cb} 
+uint8\+\_\+t test}
+
+
+
+Temporary value used during distance calculations. 
+
+\Hypertarget{main_8c_ac27d85fb274873a2e882979ddfcab7f6}\index{main.c@{main.c}!V\_ACT\_1@{V\_ACT\_1}}
+\index{V\_ACT\_1@{V\_ACT\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_ACT\_1}{V\_ACT\_1}}
+{\footnotesize\ttfamily \label{main_8c_ac27d85fb274873a2e882979ddfcab7f6} 
+uint8\+\_\+t V\+\_\+\+ACT\+\_\+1\+[4]\+ = \{0b00001001, 0b00000000, 0b00000000, 0b00000000\}}
+
+
+
+SPI command used to request or read the actual velocity value. 
+
+\Hypertarget{main_8c_ae48f5bd1a4a6d8669ee3160c4241543b}\index{main.c@{main.c}!V\_ACT\_R@{V\_ACT\_R}}
+\index{V\_ACT\_R@{V\_ACT\_R}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_ACT\_R}{V\_ACT\_R}}
+{\footnotesize\ttfamily \label{main_8c_ae48f5bd1a4a6d8669ee3160c4241543b} 
+uint8\+\_\+t V\+\_\+\+ACT\+\_\+R\+[4]\+}
+
+
+
+Buffer used to store actual velocity data returned over SPI. 
+
+\Hypertarget{main_8c_a8ec0a580e418547587b63e7fbf993460}\index{main.c@{main.c}!V\_MAX@{V\_MAX}}
+\index{V\_MAX@{V\_MAX}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_MAX}{V\_MAX}}
+{\footnotesize\ttfamily \label{main_8c_a8ec0a580e418547587b63e7fbf993460} 
+uint8\+\_\+t V\+\_\+\+MAX\+[4]\+ = \{0b00000110, 0b00000000, 0b00000000, 0b10000000\}}
+
+
+
+SPI command used to configure the maximum motor velocity. 
+
+\Hypertarget{main_8c_a9214077ecbf6717e2cd7512d2e70c124}\index{main.c@{main.c}!V\_MIN@{V\_MIN}}
+\index{V\_MIN@{V\_MIN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_MIN}{V\_MIN}}
+{\footnotesize\ttfamily \label{main_8c_a9214077ecbf6717e2cd7512d2e70c124} 
+uint8\+\_\+t V\+\_\+\+MIN\+[4]\+ = \{0b00000100, 0b00000000, 0b00000000, 0b00000100\}}
+
+
+
+SPI command used to configure the minimum motor velocity. 
+
+\Hypertarget{main_8c_a01ec2289f25186118fef85222f3f0497}\index{main.c@{main.c}!V\_old@{V\_old}}
+\index{V\_old@{V\_old}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_old}{V\_old}}
+{\footnotesize\ttfamily \label{main_8c_a01ec2289f25186118fef85222f3f0497} 
+uint8\+\_\+t V\+\_\+old}
+
+
+
+Stores the previous target velocity byte. 
+
+This value is used to avoid sending the same velocity command repeatedly. \Hypertarget{main_8c_ab17d00bbcf59c67ad9de9ea195bf55c7}\index{main.c@{main.c}!V\_TAR@{V\_TAR}}
+\index{V\_TAR@{V\_TAR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_TAR}{V\_TAR}}
+{\footnotesize\ttfamily \label{main_8c_ab17d00bbcf59c67ad9de9ea195bf55c7} 
+uint8\+\_\+t V\+\_\+\+TAR\+[4]\+ = \{0b00001000, 0b00000000, 0b00000000, 0b00100000\}}
+
+
+
+SPI command buffer used to update the target velocity. 
+
+The last bytes of this command are changed inside the main loop based on the measured pulse width and calculated velocity value. \Hypertarget{main_8c_aa25078befad73664ac49ae8a5ec69419}\index{main.c@{main.c}!V\_TARD\_1@{V\_TARD\_1}}
+\index{V\_TARD\_1@{V\_TARD\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_TARD\_1}{V\_TARD\_1}}
+{\footnotesize\ttfamily \label{main_8c_aa25078befad73664ac49ae8a5ec69419} 
+uint8\+\_\+t V\+\_\+\+TARD\+\_\+1\+[2]\+ = \{0b00001000, 0b00000000\}}
+
+
+
+Upper bytes for decreasing target velocity by 128. 
+
+\Hypertarget{main_8c_a5b2e78007c2e8e3e16bfac7b75c82ed3}\index{main.c@{main.c}!V\_TARD\_2@{V\_TARD\_2}}
+\index{V\_TARD\_2@{V\_TARD\_2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_TARD\_2}{V\_TARD\_2}}
+{\footnotesize\ttfamily \label{main_8c_a5b2e78007c2e8e3e16bfac7b75c82ed3} 
+uint8\+\_\+t V\+\_\+\+TARD\+\_\+2\+[2]\+ = \{0b00001111, 0b10000000\}}
+
+
+
+Lower bytes for decreasing target velocity by 128. 
+
+\Hypertarget{main_8c_a96471900a2ba2db27324a8246c315d09}\index{main.c@{main.c}!V\_TARU\_1@{V\_TARU\_1}}
+\index{V\_TARU\_1@{V\_TARU\_1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_TARU\_1}{V\_TARU\_1}}
+{\footnotesize\ttfamily \label{main_8c_a96471900a2ba2db27324a8246c315d09} 
+uint8\+\_\+t V\+\_\+\+TARU\+\_\+1\+[2]\+ = \{0b00001000, 0b00000000\}}
+
+
+
+Upper bytes for increasing target velocity by 128. 
+
+\Hypertarget{main_8c_adcab21b0d9d5d7a1f219e15b02ddf6c9}\index{main.c@{main.c}!V\_TARU\_2@{V\_TARU\_2}}
+\index{V\_TARU\_2@{V\_TARU\_2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{V\_TARU\_2}{V\_TARU\_2}}
+{\footnotesize\ttfamily \label{main_8c_adcab21b0d9d5d7a1f219e15b02ddf6c9} 
+uint8\+\_\+t V\+\_\+\+TARU\+\_\+2\+[2]\+ = \{0b00000000, 0b10000000\}}
+
+
+
+Lower bytes for increasing target velocity by 128. 
+
+\Hypertarget{main_8c_ad5f8b74c2fe4cec6b016ebb57bc51f81}\index{main.c@{main.c}!val1@{val1}}
+\index{val1@{val1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{val1}{val1}}
+{\footnotesize\ttfamily \label{main_8c_ad5f8b74c2fe4cec6b016ebb57bc51f81} 
+volatile uint32\+\_\+t val1 = 0}
+
+
+
+Timer count captured on the rising edge of the input pulse. 
+
+\Hypertarget{main_8c_a4f8cf089682bdbca367ccbd566ae3297}\index{main.c@{main.c}!val2@{val2}}
+\index{val2@{val2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{val2}{val2}}
+{\footnotesize\ttfamily \label{main_8c_a4f8cf089682bdbca367ccbd566ae3297} 
+volatile uint32\+\_\+t val2 = 0}
+
+
+
+Timer count captured on the falling edge of the input pulse. 
+
