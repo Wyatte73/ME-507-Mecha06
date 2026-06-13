@@ -195,8 +195,12 @@ Limit switches were used to detect the end positions of the moving carriages. Th
 
 ### Main
 
+This holds the initialization code for the motor controllers and handles the distance sensor readings via an interupt on the timer channel it is connected to. This interupt function tracks the amount of clock ticks between the high and low pulses from the disance sensor's pwm output and then converts it to a distance in inches based on a linear curve fit. It then displays this distance data on the LCD screen, updated less frequently than the actual distance value.
+
 ### LCD Driver
 [Back to top](#Table-of-Contents)
+
+This library takes the basic commands of the Hitachi protocol LCD driver and allows the display to be cleared, the location of the cursor moved, or to write a single ascii character to the display. This library ensures the lcd has had enough time to update before sending commands, and due to limitations discussed later only sends write commands to the board.
 
 ### Problems and Solutions
 [Back to top](#Table-of-Contents)
