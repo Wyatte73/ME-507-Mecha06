@@ -2,9 +2,7 @@
 
 ## Documentation
 
-The Doxygen documentation can be viewed here:
-
-file:///C:/Users/Wyatt/Downloads/ME507/docs/html/index.html
+[View the Doxygen documentation](https://yourusername.github.io/your-repo-name/)
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
