@@ -1,37 +1,10 @@
 # ME-507-Mecha16 Ice Cold Beer Project
 
-## ME507 Project Documentation
-
-This repository contains the source code and documentation for an STM32-based ME507 project. The project uses an LCD display, timer input capture, SPI communication, and motor-driver control.
-
-The main source files documented in this repository are:
-
-- `main.c`
-- `main.h`
-- `lcd.c`
-- `lcd.h`
-
-## Repository Contents
-
-- `main.c` — Main application code for peripheral initialization, LCD updates, pulse-width measurement, and motor-driver communication.
-- `main.h` — Main application header file containing GPIO definitions and function prototypes.
-- `lcd.c` — LCD driver source file for controlling an LCD using GPIO pins.
-- `lcd.h` — LCD driver header file containing the LCD structure and function prototypes.
-- `Doxyfile` — Doxygen configuration file used to generate the documentation.
-- `docs/` — Generated Doxygen HTML documentation.
-
 ## Documentation
 
 The Doxygen documentation can be viewed here:
-
+file:///C:/Users/Wyatt/Downloads/ME507/docs/html/index.html
 [View Doxygen Documentation](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)
-
-## Generating the Documentation Locally
-
-To regenerate the Doxygen documentation, run:
-
-```bash
-doxygen Doxyfile```
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
