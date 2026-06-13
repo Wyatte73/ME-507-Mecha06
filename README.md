@@ -13,8 +13,8 @@
 - [Software](#software)
   - [Main](#main)
   - [LCD Driver](#lcd-driver)
-- [Modeling](#modeling)
-- [Improvements](#improvements)
+- [Problems and Solutions](#problems-and-solutions)
+- [Moving Forward](#moving-forward)
 
 ## Project Overview
 [Back to top](#Table-of-Contents)
@@ -197,14 +197,6 @@ Limit switches were used to detect the end positions of the moving carriages. Th
 
 ### LCD Driver
 [Back to top](#Table-of-Contents)
-
-## Modeling
-[Back to top](#Table-of-Contents)
-
-## Improvements and Reflection
-[Back to top](#Table-of-Contents)
-
-This was our first time designing a custom PCB. Our board wasn't perfect and required some quick fixes to make it work. With some issues causing loss of subsystem functionality. 
 
 ### Problems and Solutions
 [Back to top](#Table-of-Contents)
