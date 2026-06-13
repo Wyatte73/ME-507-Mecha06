@@ -157,7 +157,7 @@ A Pololu Distance Sensor V2 with pulse width output and a maximum sensing range 
 ### LCD
 [Back to top](#Table-of-Contents)
 
-MAX
+A generic LCD module was added for user information. Either to display the current estimated position of the ball, in control mode. Or to display a time for scorekeeping in the user control mode. The LCD is driven by an on board controller that uses the Hitachi LCD interfacing protocol. Because of an abundacne of MCU GPIO ports the LCD was driven directly using the 11 pin control scheme, and a shift register was not included for simplicity. The LCD is shown in FIgure 16.
 
 <p align="center">
   <img width="3024" height="4032" alt="IMG_7504" src="https://github.com/user-attachments/assets/0774be44-ed09-402c-b25f-8f6ea0961d12" />
@@ -204,4 +204,25 @@ Limit switches were used to detect the end positions of the moving carriages. Th
 ## Improvements and Reflection
 [Back to top](#Table-of-Contents)
 
-This was our first time designing a custom PCB. Our board wasn't perfect and required some quick fixes to make it work. With having to make these quick fixes we leanr
+This was our first time designing a custom PCB. Our board wasn't perfect and required some quick fixes to make it work. With some issues causing loss of subsystem functionality. 
+
+### Problems and Solutions
+[Back to top](#Table-of-Contents)
+
+On the power side of the board, there were a few surpassable issues. Firstly, the thermal pin on the LDO to move from 5V to 3V3 is wired to ground on the board and internally connected to the output. The capacitor attached to the output of the switching regulator was designed around a size of capacitor that does not come in the intended package. And the diode connected to the reverse current protection circut did not have through holes large enough to mount properly.
+
+All of these problems were able to be worked around. After destroying a handfull of regulators the source of the problem was found and the chip was stood up such that the thermal pin was floating and some extra wire was added to act as a heatsink. Some jumper wires were added to the pads designated for the mis-sized capacitor and the capacitor was added to these wires. And the leads for the diode were clipped to a reasonable length and soldered on top of the though holes. The power side of the board remained stable after these changes.
+
+The LCD had a few problems that needed fixing. The enable pin and the contrast voltage pin were both pulled to 5V which caused the board to not be able to recieve commands, but also for the characters on the screen to not be visible. This was solved by sacrificing the R/W pin on the connector and transforming it into the enable pin, this tied the R/W signal to ground and removed the ablilty to read from our display but allowed for commands in general to be sent. And to fix the contrast issue a resistor was added to the contrast voltage pin, normally a potentiometer is added in this place to fine tune the contrast on the display but as this was a hot fix the ability to ajust contrast was forgone and manually set to an accpetable level.
+
+The largest problems came unfortunately in the most important part of out design, being our motors, The main problem was the chips were designed in 5V operating mode, while the MCU uses 3V3 logic. This caused some issues with SPI communication so pins on the motoin control chips were bent and ajusted to work on 3V3 by tying them to the test points on the board. This sucessfully enabled communication with the chips and allowed for velocites to be sent to the stepper motors. 
+
+A much larger setback was during testing and diagnosis of the logic voltage issue, one of the motion controllers was removed from the board to simplify testing, however its matching motor driver was left on the board and, lacking the current regulation from the controller, was catastrophically destroyed under the amperage of the power supply. This was an unrecoverable event and is the reason most of the functionallity of our system is not present. 
+
+The pivoted idea was to just have the distance sensor controll the motor in 1D and balance the ball in the center of the shaft, but during implementation the second motor controller stopped responding. So in its current state the device reads a distace value and displays it on the LCD.
+
+### Moving Forward
+[Back to top](#Table-of-Contents)
+
+We Both are very sadened to have this be the outcome of the project, but we both feel extremely confidant in a V2 of the system if were to have permitted it. It is almost certian that a second version of the PCB would still not be perfect, but with our newfound understanding it would be a significant improvment on the first rendition, and would have allowed us to begin to tackle the chalenge of controling the system. Becides the re-assigning of pins and resizing of components, a more more enlightened outlook would be taken when selecting the motor control and driving ICs and could be swapped to a DC motor and encoder setup to simplify the control hardware, while increasing the software load.
+
